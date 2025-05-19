@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -24,6 +23,7 @@ import CreateBid from "./pages/dashboard/officer/CreateBid";
 import ManageBids from "./pages/dashboard/officer/ManageBids";
 import EvaluateProposal from "./pages/dashboard/committee/EvaluateProposal";
 import UserManagement from "./components/admin/UserManagement";
+import About from "./pages/About";
 
 // Create placeholder components for routes that don't exist yet
 const BidderProposals = () => <div className="p-4"><h1 className="text-2xl font-bold mb-4">My Proposals</h1><p>This feature is coming soon.</p></div>;
@@ -46,6 +46,7 @@ const App = () => (
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Index />} />
+              <Route path="/about" element={<About />} />
               <Route path="/auth/login" element={<Login />} />
               <Route path="/auth/register" element={<Register />} />
               <Route path="/bids" element={<Bids />} />

@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -47,12 +46,12 @@ export function Navbar({ user: propUser }: NavbarProps) {
 
   return (
     <nav className="sticky top-0 z-40 backdrop-blur bg-background border-b">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
+      <div className="w-full max-w-screen-2xl mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="flex justify-between items-center gap-x-8 h-20 min-h-0">
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
               <Link to="/" className="flex items-center">
-                <span className="text-2xl font-bold text-primary">
+                <span className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-primary">
                   Ethiopia Bid-Chain
                 </span>
               </Link>
@@ -60,24 +59,24 @@ export function Navbar({ user: propUser }: NavbarProps) {
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
               <Link
                 to="/bids"
-                className="inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2 border-transparent hover:border-primary hover:text-primary transition-colors"
+                className="inline-flex items-center px-1 pt-1 text-base md:text-lg lg:text-xl xl:text-2xl font-semibold border-b-2 border-transparent hover:border-primary hover:text-primary transition-colors"
               >
                 Browse Bids
               </Link>
               {user && (
                 <Link
                   to="/dashboard"
-                  className="inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2 border-transparent hover:border-primary hover:text-primary transition-colors"
+                  className="inline-flex items-center px-1 pt-1 text-base md:text-lg lg:text-xl xl:text-2xl font-semibold border-b-2 border-transparent hover:border-primary hover:text-primary transition-colors"
                 >
                   Dashboard
                 </Link>
               )}
-              <a
-                href="#about"
-                className="inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2 border-transparent hover:border-primary hover:text-primary transition-colors"
+              <Link
+                to="/about"
+                className="inline-flex items-center px-1 pt-1 text-base md:text-lg lg:text-xl xl:text-2xl font-semibold border-b-2 border-transparent hover:border-primary hover:text-primary transition-colors"
               >
                 About
-              </a>
+              </Link>
             </div>
           </div>
           <div className="hidden sm:ml-6 sm:flex sm:items-center space-x-4">
@@ -85,8 +84,8 @@ export function Navbar({ user: propUser }: NavbarProps) {
             {user ? (
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" className="relative h-8 w-8 rounded-full">
-                    <Avatar className="h-9 w-9">
+                  <Button variant="ghost" size="lg" className="relative h-14 w-14 rounded-full p-0">
+                    <Avatar className="h-12 w-12">
                       <AvatarFallback className="bg-primary/10 text-primary">
                         {user.name ? getInitials(user.name) : "U"}
                       </AvatarFallback>
@@ -96,8 +95,8 @@ export function Navbar({ user: propUser }: NavbarProps) {
                 <DropdownMenuContent align="end">
                   <DropdownMenuLabel>
                     <div className="flex flex-col space-y-1">
-                      <p className="text-sm font-medium leading-none">{user.name}</p>
-                      <p className="text-xs leading-none text-muted-foreground">{user.email}</p>
+                      <p className="text-base md:text-lg lg:text-xl font-medium leading-none">{user.name}</p>
+                      <p className="text-xs md:text-sm leading-none text-muted-foreground">{user.email}</p>
                     </div>
                   </DropdownMenuLabel>
                   <DropdownMenuSeparator />
@@ -116,10 +115,10 @@ export function Navbar({ user: propUser }: NavbarProps) {
             ) : (
               <div className="flex items-center gap-4">
                 <Link to="/auth/login">
-                  <Button variant="outline">Login</Button>
+                  <Button variant="outline" size="lg" className="px-8 py-3 text-lg">Login</Button>
                 </Link>
                 <Link to="/auth/register">
-                  <Button>Register</Button>
+                  <Button size="lg" className="px-8 py-3 text-lg">Register</Button>
                 </Link>
               </div>
             )}
@@ -149,7 +148,7 @@ export function Navbar({ user: propUser }: NavbarProps) {
           <div className="pt-2 pb-3 space-y-1 px-4">
             <Link
               to="/bids"
-              className="block pl-3 pr-4 py-2 text-base font-medium hover:bg-gray-50 rounded-md"
+              className="block pl-3 pr-4 py-2 text-lg md:text-xl font-semibold hover:bg-gray-50 rounded-md"
               onClick={toggleMenu}
             >
               Browse Bids
@@ -157,19 +156,19 @@ export function Navbar({ user: propUser }: NavbarProps) {
             {user && (
               <Link
                 to="/dashboard"
-                className="block pl-3 pr-4 py-2 text-base font-medium hover:bg-gray-50 rounded-md"
+                className="block pl-3 pr-4 py-2 text-lg md:text-xl font-semibold hover:bg-gray-50 rounded-md"
                 onClick={toggleMenu}
               >
                 Dashboard
               </Link>
             )}
-            <a
-              href="#about"
-              className="block pl-3 pr-4 py-2 text-base font-medium hover:bg-gray-50 rounded-md"
+            <Link
+              to="/about"
+              className="block pl-3 pr-4 py-2 text-lg md:text-xl font-semibold hover:bg-gray-50 rounded-md"
               onClick={toggleMenu}
             >
               About
-            </a>
+            </Link>
             {user ? (
               <>
                 <Link

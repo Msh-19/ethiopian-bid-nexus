@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Navbar } from "@/components/layout/Navbar";
@@ -34,7 +33,7 @@ const Index = () => {
   const stats = [
     { value: "5,000+", label: "Active Bids" },
     { value: "1,200+", label: "Registered Companies" },
-    { value: "৳350M", label: "Contract Value" },
+    { value: "350Mብር", label: "Contract Value" },
     { value: "98%", label: "Digital Compliance" },
   ];
 
@@ -47,13 +46,13 @@ const Index = () => {
         <main id="main" className="flex-grow">
           {/* Hero Section */}
           <header className="py-20 bg-gradient-to-b from-primary/10 to-background">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div className="animate-fade-in">
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-6">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-screen-2xl 2xl:max-w-screen-3xl">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center xl:gap-24">
+                <div className="animate-fade-in flex flex-col items-start xl:items-start xl:justify-center">
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl font-bold tracking-tight text-foreground mb-6 max-w-2xl xl:max-w-3xl">
                     Ethiopia's Digital <span className="text-primary">Public Procurement</span> Platform
                   </h1>
-                  <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg">
+                  <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg xl:max-w-xl 2xl:max-w-2xl">
                     A blockchain-powered platform revolutionizing how government
                     contracts are awarded through transparency, security, and
                     efficiency.
@@ -71,11 +70,11 @@ const Index = () => {
                     </Link>
                   </div>
                 </div>
-                <div className="rounded-2xl overflow-hidden shadow-lg">
+                <div className="rounded-2xl overflow-hidden shadow-lg flex justify-center xl:justify-end">
                   <img
                     src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1674&auto=format&fit=crop"
                     alt="Digital Procurement Platform"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover max-w-xl xl:max-w-2xl 2xl:max-w-3xl mx-auto"
                   />
                 </div>
               </div>
@@ -84,12 +83,12 @@ const Index = () => {
 
           {/* Stats Section */}
           <section className="py-16 bg-primary text-primary-foreground">
-            <div className="container mx-auto px-4">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div className="container mx-auto px-4 xl:max-w-screen-2xl 2xl:max-w-screen-3xl">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center xl:gap-16">
                 {stats.map((stat, index) => (
                   <div key={index}>
-                    <p className="text-3xl md:text-4xl font-bold">{stat.value}</p>
-                    <p className="text-lg opacity-80">{stat.label}</p>
+                    <p className="text-3xl md:text-4xl xl:text-5xl font-bold">{stat.value}</p>
+                    <p className="text-lg opacity-80 xl:text-xl">{stat.label}</p>
                   </div>
                 ))}
               </div>
@@ -98,27 +97,27 @@ const Index = () => {
 
           {/* Features Section */}
           <section id="about" className="py-20">
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto px-4 xl:max-w-screen-2xl 2xl:max-w-screen-3xl">
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold mb-4">
                   Transforming Public Procurement
                 </h2>
-                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto xl:text-xl">
                   Ethiopia Bid-Chain combines cutting-edge blockchain technology with
                   user-friendly interfaces to create a more accountable procurement
                   ecosystem.
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-12 xl:gap-16">
                 {features.map((feature, index) => (
                   <div
                     key={index}
-                    className="bg-card text-card-foreground p-8 rounded-2xl shadow-lg card-hover"
+                    className="bg-card text-card-foreground p-8 rounded-2xl shadow-lg card-hover max-w-md mx-auto xl:max-w-lg"
                   >
                     <div className="mb-4">{feature.icon}</div>
-                    <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                    <p className="text-muted-foreground">{feature.description}</p>
+                    <h3 className="text-xl font-semibold mb-3 xl:text-2xl">{feature.title}</h3>
+                    <p className="text-muted-foreground xl:text-lg">{feature.description}</p>
                   </div>
                 ))}
               </div>
@@ -127,18 +126,18 @@ const Index = () => {
 
           {/* How It Works Section */}
           <section className="py-20 bg-muted">
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto px-4 xl:max-w-screen-2xl 2xl:max-w-screen-3xl">
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold mb-4">
                   How It Works
                 </h2>
-                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto xl:text-xl">
                   A streamlined process that benefits all stakeholders in the
                   procurement ecosystem.
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 xl:gap-12">
                 {[
                   {
                     step: "01",

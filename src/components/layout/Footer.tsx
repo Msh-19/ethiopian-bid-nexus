@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 
 export function Footer() {
@@ -13,8 +12,7 @@ export function Footer() {
               Ethiopia Bid-Chain
             </Link>
             <p className="mt-4 max-w-md">
-              A blockchain-backed bid management system for Ethiopian public procurement,
-              enhancing transparency, security, and efficiency in the bidding process.
+              Ethiopia Bid-Chain is a blockchain-backed bid management system developed as a capstone project by students of AASTU, aiming to enhance transparency, security, and efficiency in public procurement.
             </p>
           </div>
           <div>
@@ -55,9 +53,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p>&copy; {currentYear} Ethiopia Bid-Chain. All rights reserved.</p>
             <p className="mt-4 md:mt-0 text-sm">
-              This system is maintained by the Federal Public Procurement Authority of Ethiopia.
-              <br />
-              Official government procurement platform for transparent and efficient public bidding.
+              This project was created as part of the undergraduate capstone program at Addis Ababa Science and Technology University (AASTU).
             </p>
           </div>
         </div>
